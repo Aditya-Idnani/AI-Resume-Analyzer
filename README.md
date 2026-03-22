@@ -1,40 +1,255 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 ResumeAI – AI-Powered Resume Analyzer
 
-## Getting Started
+> Analyze your resume like a recruiter. Beat ATS filters. Land more interviews.
 
-First, run the development server:
+---
+
+## 📌 Overview
+
+**ResumeAI** is a full-stack AI-powered web application that analyzes resumes and provides actionable insights to improve ATS (Applicant Tracking System) compatibility.
+
+It goes beyond basic keyword matching by understanding **context, skills, and job requirements** using AI.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+
+* Email & password login
+* Google OAuth (Supabase)
+* Secure session handling
+
+### 📄 Resume Upload & Parsing
+
+* Upload PDF / DOCX resumes
+* Automatic text extraction
+* Intelligent section detection (skills, experience, etc.)
+
+### 🤖 AI-Powered Analysis
+
+* ATS compatibility score
+* Strengths & weaknesses breakdown
+* Resume summary insights
+* AI-driven feedback
+
+### 🎯 Smart Keyword Matching
+
+* Context-aware keyword extraction
+* Matches resume with job description
+* Shows:
+
+  * ✅ Matched keywords
+  * ❌ Missing keywords
+  * 💡 Recommended skills
+
+### 📊 Beautiful Dashboard
+
+* Clean SaaS-style UI
+* Progress indicators
+* Real-time analysis display
+* Persistent user sessions
+
+---
+
+## 🧠 How It Works
+
+1. User uploads resume
+2. Backend extracts text (PDF/DOCX)
+3. Resume is parsed into structured sections
+4. AI (Gemini API) analyzes:
+
+   * Skills
+   * Experience
+   * Relevance to job description
+5. Results are returned with:
+
+   * ATS score
+   * Keyword insights
+   * Suggestions
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+* Multer (file upload)
+* pdf-parse & mammoth (text extraction)
+
+### AI
+
+* Google Gemini API
+
+### Auth & Database
+
+* Supabase
+
+---
+
+## 📁 Project Structure
+
+```
+AI-Resume-Analyser/
+│
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── services/
+│   ├── utils/
+│   ├── uploads/
+│   └── server.js
+│
+├── src/
+│   ├── app/
+│   │   ├── dashboard/
+│   │   ├── login/
+│   │   ├── signup/
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   ├── context/
+│   └── lib/
+│
+├── public/
+└── README.md
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/resume-ai.git
+cd resume-ai
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+#### Frontend
+
+```bash
+npm install
+```
+
+#### Backend
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+### 3️⃣ Environment Variables
+
+#### 📁 Frontend (.env.local)
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+```
+
+#### 📁 Backend (.env)
+
+```env
+GEMINI_API_KEY=your_gemini_key
+PORT=5050
+```
+
+---
+
+### 4️⃣ Run Project
+
+#### Start Backend
+
+```bash
+cd backend
+npm run dev
+```
+
+#### Start Frontend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5️⃣ Open App
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+http://localhost:3000
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Demo Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Sign up / Login
+2. Upload your resume
+3. (Optional) Add job description
+4. Click **Analyze**
+5. View:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   * ATS Score
+   * Keyword Match
+   * Suggestions
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚧 Current Limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# AI-Resume-Analyzer
->>>>>>> 522e4587c0b330a0e89ac6ae2a3d13e2fd964eb4
+* AI response formatting may vary
+* Keyword matching still evolving
+* Resume parsing can improve for complex formats
+
+---
+
+## 🔮 Future Improvements
+
+* 🔥 Advanced ATS scoring model
+* 📊 Resume version comparison
+* 🧠 Skill clustering & ranking
+* 📈 Interview probability prediction
+* 🌍 Multi-language resume support
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!
+Feel free to open issues for bugs or feature suggestions.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Aditya Idnani**
+Passionate about building impactful AI-powered products 🚀
+
+---
+
+## ⭐ If you like this project
+
+Give it a star ⭐ on GitHub and share it!
+
+---
